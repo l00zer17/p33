@@ -1,14 +1,22 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+    import java.util.Scanner;
 
-// import org.junit.jupiter.api.Test;
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            char inputChar;
+            System.out.println("Wpisz znak: ");
 
-public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+            while (true) {
+                inputChar = scanner.next().charAt(0);  // Pobieranie pojedynczego znaku
+                if (inputChar == 'q') {
+                    System.out.println("Wpisano 'q'. Zakończono program.");
+                    break;  
+                }
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
-}
+            
+                System.out.println("Wprowadzony znak: " + inputChar);
+            }
+
+            scanner.close(); 
+        }
+    }
